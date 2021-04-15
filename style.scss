@@ -51,9 +51,6 @@ body {
         }
     }
     &__menu-item{
-        &:hover {
-            color: #fff;
-        }
         &:focus {
             background-color: rgb(26, 25, 25);
             border-radius: 5px;
