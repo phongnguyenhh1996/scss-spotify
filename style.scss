@@ -23,7 +23,7 @@ body {
     }
     &__logo-img{
         width: 200px;
-    height: 50px;
+        height: 50px;
     }
     &__menu{
         margin-bottom: 25px;
@@ -47,12 +47,14 @@ body {
         padding: 10px 20px 10px 20px;
         box-sizing: border-box;
     }
-    &__menu-item:hover &__menu-link{
-        color: #fff;
-    }
-    &__menu-item :focus {
-        background-color: rgb(26, 25, 25);
-        border-radius: 5px;
+    &__menu-item{
+        &:hover &__menu-link{
+            color: #fff;
+        }
+        &:focus {
+            background-color: rgb(26, 25, 25);
+            border-radius: 5px;
+        }
     }
     &__list-icon{
         height: 25px;
@@ -60,12 +62,12 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-    &__list-icon--heart {
-        background: linear-gradient(135deg, #450af5, #c4efd9);
-    }
-    &__list-icon--plus {
-        background: white;
+        &--heart {
+            background: linear-gradient(135deg, #450af5, #c4efd9);
+        }
+        &--plus {
+            background: white;
+        }
     }
 }
 .section {
@@ -121,12 +123,12 @@ body {
         flex-basis: 32%;
         margin-bottom: 16px;
         background-color: #282828;
-    }
-    &__album:hover {
-        background-color: #3c2c2b;
-    } 
-    &__album:hover .album-play{
-        display: block;
+        &:hover {
+            background-color: #3c2c2b;
+        } 
+        &:hover .album-play{
+            display: block;
+        }
     }
     &__album-text {
         padding: 16px;
