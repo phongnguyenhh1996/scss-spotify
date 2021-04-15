@@ -54,21 +54,18 @@ body {
         background-color: rgb(26, 25, 25);
         border-radius: 5px;
     }
-    &__list-icon--heart {
+    &__list-icon{
         height: 25px;
         width: 25px;
-        background: linear-gradient(135deg, #450af5, #c4efd9);
         display: flex;
         align-items: center;
         justify-content: center;
     }
+    &__list-icon--heart {
+        background: linear-gradient(135deg, #450af5, #c4efd9);
+    }
     &__list-icon--plus {
-        height: 25px;
-        width: 25px;
         background: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 }
 .section {
@@ -156,6 +153,9 @@ body {
         align-items: center;
         justify-content: center;
         padding:3px 5px 3px 3px;
+        &:hover {
+            background-color: #363636;
+        }
     }
     &--upgrade-text {
         color: #fff;
@@ -165,17 +165,14 @@ body {
         letter-spacing: 1.76px;
         text-transform: uppercase;
         padding: 8px 34px;
+        &:hover {
+        transform: scale(1.1);
+        background-color: rgba(0, 0, 0, 0.781);
+    }
     }
     &--info-text {
         color: #fff;
         margin-right: 5px;
-    }
-    &--info:hover {
-        background-color: #363636;
-    }
-    &--upgrade:hover {
-        transform: scale(1.1);
-        background-color: rgba(0, 0, 0, 0.781);
     }
 }
 .btn,
