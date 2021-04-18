@@ -230,6 +230,7 @@ body {
         }
     }
     &-list{
+        transition:all 0.4s ease;
         position: relative;
         display: flex;
         flex-direction:column;
