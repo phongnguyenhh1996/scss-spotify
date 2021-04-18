@@ -3,6 +3,7 @@ $danger: purple;
 body {
     padding: 0px;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 .wapper {
     display: flex;
@@ -46,11 +47,11 @@ body {
         align-items: center;
         padding: 10px 20px 10px 20px;
         box-sizing: border-box;
+    }
+    &__menu-item ,&__menu-link{
         &:hover {
             color: #fff;
         }
-    }
-    &__menu-item{
         &:focus {
             background-color: rgb(26, 25, 25);
             border-radius: 5px;
@@ -106,28 +107,29 @@ body {
     }
     &__title {
         position: relative;
+        margin-bottom: 24px;
     }
     &__text {
         color: #fff;
         font-size: 32px;
         font-weight: 700;
-        line-height: 36px;
         letter-spacing: -0.04em;
         text-transform: none;
+        text-decoration: none;
         margin-bottom: 24px;
     }
     &__album {
         display: flex;
         height: 80px;
         border-radius: 5px;
-        flex-basis: 32%;
-        margin-bottom: 16px;
+        flex-basis: 31.8%;
+        margin-bottom: 18px;
         background-color: #282828;
         &:hover {
             background-color: #3c2c2b;
         } 
         &:hover .album-play{
-            display: block;
+            opacity: 1;
         }
     }
     &__album-text {
@@ -159,22 +161,113 @@ body {
             background-color: #363636;
         }
     }
-    &--upgrade-text {
-        color: #fff;
-        font-size: 12px;
-        line-height: 18px;
-        font-weight: 700;
-        letter-spacing: 1.76px;
-        text-transform: uppercase;
-        padding: 8px 34px;
+    &--upgrade{
         &:hover {
-        transform: scale(1.1);
-        background-color: rgba(0, 0, 0, 0.781);
-    }
+            transform: scale(1.1);
+            background-color: rgba(0, 0, 0, 0.781);
+        }
+        &-text{
+            color: #fff;
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: 700;
+            letter-spacing: 1.76px;
+            text-transform: uppercase;
+            padding: 8px 34px; 
+        }
     }
     &--info-text {
         color: #fff;
         margin-right: 5px;
+    }
+}
+.main-section__recently{
+    margin-bottom: 24px;
+    &-album{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &-list-text-name{
+        text-decoration: none;
+    }
+    &-text{
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        letter-spacing: -0.04em;
+        text-transform: none;
+        margin-bottom: 24px;
+        text-decoration: none;
+        .text-name{
+            color: #fff;
+            text-decoration: none;
+            margin: 0;
+            &:hover{
+                text-decoration:underline;
+            }
+        }         
+        .title-text{
+            margin: 0;
+            font-size: 14px;
+            color: #b3b3b3;
+        }
+        &-title{
+            display: flex;
+            justify-content: space-between;
+            .see-all{
+                color: #b3b3b3;
+                text-decoration: none;
+                font-size: 16px;
+                text-transform: uppercase;
+                &:hover{
+                    text-decoration:underline;
+                }
+            }
+        }
+    }
+    &-list{
+        transition:all 0.4s ease;
+        position: relative;
+        display: flex;
+        flex-direction:column;
+        background:#282828;
+        width: 160px;
+        border-radius:5px;
+        padding: 16px;
+        margin-bottom: 16px;
+        &:hover {
+            background-color: #3c2c2b;
+        } 
+        &:hover .album-play{
+            position:absolute;
+            z-index: 1;
+            opacity: 1;
+            bottom: 8px;
+        }
+        &-img{
+            display:flex;
+            position: relative;
+            .album-play{
+                position:absolute;
+                bottom: 0;
+                right: 8px;
+            }
+        }
+        &-image{
+            width: 160px;
+            position: relative;
+            z-index: 0;
+            &--img-singer{
+                border-radius: 50%;
+            }
+            &--img-list{
+                border-radius: 2px;
+            }
+        }
     }
 }
 .btn,
@@ -200,16 +293,15 @@ body {
     font-size: 16px;
     text-decoration: none;
     font-weight: 700;
-    line-height: 24px;
 }
 .album-play {
+    transition:all 0.4s ease;
     height: 40px;
     width: 40px;
-    border-radius: 500px;
+    border-radius: 50%;
     background-color: #1db954;
-    margin-right: 16px;
     border: none;
-    display: none;
+    opacity: 0;
     &:hover {
         transform: scale(1.05);
     }
@@ -219,4 +311,15 @@ body {
     height: 28px;
     border-radius: 50%;
     margin-right: 5px;
+}
+.album-text-name{
+    margin-top: -10px;
+    font-size: 14px;
+    color: #b3b3b3;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+     display: -webkit-box;
+    -webkit-box-orient: vertical;
 }
